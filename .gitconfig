@@ -1,0 +1,16 @@
+[alias]
+  co = checkout
+  br = branch
+  st = status
+  cm = commit
+  # ファイル名のみの差分を表示する
+  difff = diff --name-status
+  diffs = diff --cached
+  diffa = diff --stat --name-only
+  # log確認系
+  log1  = log -10 --oneline
+  log2  = log --pretty='format:%C(yellow)%h%Creset %C(magenta)%cd%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset%C(black bold)%ar%Creset' --date=iso
+  log3  = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+  unstage = reset HEAD
+  cancel  = reset --soft HEAD^
+  revall  = checkout . # ワークツリーの内容を全部取り消し
